@@ -10,6 +10,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import cl.cmqsalud.app.viewmodel.DocumentosViewModel
+import androidx.compose.ui.tooling.preview.Preview
 
 @Composable
 fun MisDocumentosScreen(viewModel: DocumentosViewModel) {
@@ -48,4 +49,12 @@ fun MisDocumentosScreen(viewModel: DocumentosViewModel) {
             }
         }
     }
+}
+@Preview(showBackground = true)
+@Composable
+fun MisDocumentosScreenPreview() {
+    val viewModel = DocumentosViewModel()
+    viewModel.onTipoChange("Certificado")
+    viewModel.guardarDocumento {}
+    MisDocumentosScreen(viewModel = viewModel)
 }

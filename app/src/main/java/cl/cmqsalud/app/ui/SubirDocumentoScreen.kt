@@ -6,6 +6,7 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import cl.cmqsalud.app.viewmodel.DocumentosViewModel
+import androidx.compose.ui.tooling.preview.Preview
 
 private val tiposDocumento = listOf("Certificado", "Contrato", "Capacitación")
 
@@ -77,3 +78,4 @@ fun SubirDocumentoScreen(
         }
     }
 }
+@Preview(showBackground = true) @Composable fun SubirDocumentoScreenPreview() { SubirDocumentoScreen( viewModel = DocumentosViewModel(), onDocumentoGuardado = {} ) }
